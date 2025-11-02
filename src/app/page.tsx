@@ -6,13 +6,24 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <main className="relative min-h-screen w-full bg-black">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/gallery-4.jpg')",
-          }}
-        />
+      <main className="relative min-h-screen w-full bg-black overflow-hidden">
+        {/* Vídeo de Fundo */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+          poster="/gallery-4.jpg" // Imagem de fallback
+        >
+          <source src="/vid.mp4" type="video/mp4" />
+          <source src="/hero-video.webm" type="video/webm" />
+          {/* Fallback para browsers que não suportam vídeo */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/gallery-4.jpg')" }}
+          />
+        </video>
         <div className="absolute inset-0 bg-black/70" />
         
         <div className="relative z-10 px-4 py-6 sm:px-6 lg:px-8">
@@ -29,9 +40,6 @@ export default function Home() {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
               <button className="transform rounded-full bg-red-600 px-8 py-4 text-base font-semibold text-white shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-red-700 hover:shadow-3xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-black sm:text-lg">
                 Começar Treino
-              </button>
-              <button className="transform rounded-full border border-white/30 bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/20 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black sm:text-lg">
-                Conhecer Planos
               </button>
             </div>
           </div>
@@ -68,11 +76,11 @@ export default function Home() {
               
               <div className="grid grid-cols-2 gap-4 pt-4 sm:grid-cols-4">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-red-500 sm:text-3xl">1000+</div>
+                  <div className="text-2xl font-bold text-red-500 sm:text-3xl">200+</div>
                   <div className="text-sm text-gray-400 sm:text-base">Membros Ativos</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-red-500 sm:text-3xl">15+</div>
+                  <div className="text-2xl font-bold text-red-500 sm:text-3xl">5</div>
                   <div className="text-sm text-gray-400 sm:text-base">Modalidades</div>
                 </div>
                 <div className="text-center">
@@ -225,7 +233,7 @@ export default function Home() {
 
       {/* Gallery Section */}
     <section id="modalities" className="relative bg-black py-20">
-  <div className="absolute inset-0 bg-gradient-to-br from-red-900/5 via-black to-red-900/5"></div>
+  <div className="absolute inset-0 bg-gradient-to-br from-red-900/5 via-black to-red-900/5 pointer-events-none"></div>
   
   <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div className="mb-16 text-center">
@@ -241,46 +249,52 @@ export default function Home() {
     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {[
         {
-          image: "/gallery-2.jpg",
+          image: "/gallery-4.jpg",
           title: "Musculação",
           description: "Treino de força com equipamentos de última geração e acompanhamento profissional",
           features: ["Equipamentos premium", "Planos personalizados", "Acompanhamento técnico"],
-          schedule: "Seg-Sex: 05:00-22:00 | Sáb: 07:00-21:00"
+          schedule: "Seg-Sex: 05:00-22:00",
+          slug: "musculacao",
         },
         {
-          image: "/gallery-3.jpg",
-          title: "Jiu-Jitsu Brasileiro",
-          description: "Arte marcial brasileira que desenvolve técnica, disciplina e condicionamento físico",
-          features: ["Aulas para todos os níveis", "Professores certificados", "Competições"],
-          schedule: "Seg/Qua/Sex: 18:00-20:00"
-        },
-        {
-          image: "/gallery-3.jpg",
-          title: "Kick Boxing",
-          description: "Combina técnicas de boxe e artes marciais para um treino completo e dinâmico",
-          features: ["Condicionamento físico", "Técnica de defesa", "Aulas em grupo"],
-          schedule: "Seg/Qua: 18:00-20:00"
-        },
-        {
-          image: "/gallery-3.jpg",
-          title: "CrossTraining",
+          image: "/galley-1.jpg",
+          title: "Cross Fit",
           description: "Treino funcional de alta intensidade para melhorar todas as capacidades físicas",
           features: ["Treinos variados", "Alta intensidade", "Resultados rápidos"],
-          schedule: "Seg-Sex: 06:00-22:00"
-        },
-        {
-          image: "/logo.jpg",
-          title: "Judo",
-          description: "Arte marcial tradicional que desenvolve força, equilíbrio e autodisciplina",
-          features: ["Técnicas de projeção", "Trabalho de solo", "Valores marciais"],
-          schedule: "Seg/Qua: 20:00-22:00"
+          schedule: "Seg-Sex: 06:00-22:00",
+          slug: "cross-fit"
         },
         {
           image: "/gallery-4.jpg",
           title: "Zona Cardio",
           description: "Área completa com equipamentos modernos para melhorar a sua resistência cardiovascular",
           features: ["Esteiras profissionais", "Bicicletas elípticas", "Escadas climáticas"],
-          schedule: "Seg-Dom: 05:00-23:00"
+          schedule: "Seg-Dom: 05:00-23:00",
+          slug: "zona-cardio",
+        },
+        {
+          image: "/galley-1.jpg",
+          title: "Jiu-Jitsu Brasileiro",
+          description: "Arte marcial brasileira que desenvolve técnica, disciplina e condicionamento físico",
+          features: ["Aulas para todos os níveis", "Professores certificados", "Competições"],
+          schedule: "Seg/Qua/Sex: 18:00-20:00",
+          slug: "jiu-jitsu-brasileiro"
+        },
+        {
+          image: "/galley-1.jpg",
+          title: "Kick Boxing",
+          description: "Combina técnicas de boxe e artes marciais para um treino completo e dinâmico",
+          features: ["Condicionamento físico", "Técnica de defesa", "Aulas em grupo"],
+          schedule: "Seg/Qua: 18:00-20:00",
+          slug: "kick-boxing",
+        },
+        {
+          image: "/galley-1.jpg",
+          title: "Judo",
+          description: "Arte marcial tradicional que desenvolve força, equilíbrio e autodisciplina",
+          features: ["Técnicas de projeção", "Trabalho de solo", "Valores marciais"],
+          schedule: "Seg/Qua: 20:00-22:00",
+          slug: "judo",
         }
       ].map((modality, index) => (
         <div
@@ -356,14 +370,18 @@ export default function Home() {
                 <span>{modality.schedule}</span>
               </div>
               
-              <button className="transform rounded-full bg-red-600/20 px-4 py-2 text-xs font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-red-600/40 hover:scale-105">
+              <Link
+              href={`/modalities/${modality.slug.toLowerCase().replace(/\s+/g, '-')}`}
+              className="rounded-full bg-red-600 px-4 py-2 text-xs font-semibold text-white transition-all duration-300 hover:bg-red-700"
+              >
                 Saber Mais
-              </button>
-            </div>
-          </div>
+                </Link>
 
+            </div>
+            
+          </div>
           {/* Hover Effect */}
-          <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-red-600/0 via-red-600/0 to-red-600/0 transition-all duration-500 group-hover:from-red-600/10 group-hover:via-red-600/5 group-hover:to-red-600/10"></div>
+          <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-red-600/0 via-red-600/0 to-red-600/0 transition-all duration-500 group-hover:from-red-600/10 group-hover:via-red-600/5 group-hover:to-red-600/10 pointer-events-none"></div>
         </div>
       ))}
     </div>
@@ -506,7 +524,10 @@ export default function Home() {
                         : "border border-red-500/30 bg-red-600/20 text-white backdrop-blur-sm hover:bg-red-600/40"
                     }`}
                   >
-                    Escolher Plano
+                    <Link 
+                    href={`https://wa.me/244924010504?text=Olá! Gostaria de assinar o plano ${plan.name}`}
+                    target="_blank"
+                    rel="noopener noreferrer"> Escolher Plano</Link>
                   </button>
                 </div>
               </div>
@@ -514,7 +535,79 @@ export default function Home() {
           </div>
         </div>
       </section>
+{/* FAQ Section */}
+<section id="faq" className="relative bg-black py-20">
+  <div className="absolute inset-0 bg-gradient-to-b from-red-900/5 to-red-900/10" />
+  
+  <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div className="mb-16 text-center">
+      <h2 className="mb-4 text-4xl font-bold text-white sm:text-5xl md:text-6xl">
+        Perguntas <span>Frequentes</span>
+      </h2>
+      <div className="mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-red-500 to-red-600" />
+      <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400 sm:text-xl">
+        Encontre respostas para as dúvidas mais comuns
+      </p>
+    </div>
 
+    <div className="space-y-4">
+      {[
+        {
+          question: "Qual é a idade mínima para me inscrever?",
+          answer: "Aceitamos membros a partir dos 16 anos. Menores de idade precisam de autorização dos pais ou responsáveis. Temos programas específicos para jovens que focam no desenvolvimento físico saudável e seguro."
+        },
+        {
+          question: "Os planos incluem acompanhamento nutricional?",
+          answer: "O plano Elite inclui acompanhamento nutricional completo com consultas mensais. Para os planos Básico e Premium, oferecemos consultas opcionais com a nossa nutricionista a preços especiais para membros."
+        },
+        {
+          question: "Posso congelar a minha mensalidade?",
+          answer: "Sim, oferecemos a opção de congelamento por até 3 meses por ano, mediante apresentação de justificação médica ou profissional. Basta contactar a nossa receção com 15 dias de antecedência."
+        },
+        {
+          question: "O ginásio tem estacionamento?",
+          answer: "Sim, temos estacionamento gratuito e seguro para todos os nossos membros. O parque de estacionamento é vigiado 24 horas e possui mais de 50 lugares disponíveis."
+        },
+        {
+          question: "Que equipamentos estão disponíveis?",
+          answer: "Contamos com equipamentos de última geração: máquinas de musculação Life Fitness, área cardio completa com esteiras, bicicletas e elípticas, pesos livres, área de functional training e espaço dedicado para artes marciais."
+        },
+        {
+          question: "Posso experimentar antes de me inscrever?",
+          answer: "Claro! Oferecemos uma aula experimental gratuita onde podes conhecer as instalações, equipamentos e falar com os nossos instrutores. Marca a tua aula através do WhatsApp ou diretamente na receção."
+        },
+        {
+          question: "O ginásio está aberto aos fins de semana?",
+          answer: "Sim, estamos abertos de segunda a sexta das 05:00 às 23:00 e aos fins de semana (sábado e domingo) das 07:00 às 21:00. Temos horário alargado para se adaptar à tua rotina."
+        }
+      ].map((faq, index) => (
+        <div
+          key={index}
+          className="group rounded-2xl border border-red-500/20 bg-gradient-to-r from-black/80 to-red-900/10 backdrop-blur-sm transition-all duration-300 hover:border-red-500/40"
+        >
+          <details className="group">
+            <summary className="flex cursor-pointer list-none items-center justify-between p-6 text-lg font-semibold text-white transition-colors duration-300 hover:text-red-400 lg:text-xl">
+              {faq.question}
+              <svg 
+                className="h-6 w-6 flex-shrink-0 text-red-400 transition-transform duration-300 group-open:rotate-180" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div className="border-t border-red-500/20 px-6 pb-6 pt-4">
+              <p className="text-gray-300 leading-relaxed">
+                {faq.answer}
+              </p>
+            </div>
+          </details>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Footer */}
       <footer className="relative border-t border-red-500/20 bg-black">
@@ -539,19 +632,7 @@ export default function Home() {
               
               <div className="flex space-x-4">
                 <Link
-                  href="#"
-                  className="group flex h-10 w-10 items-center justify-center rounded-full bg-red-600/20 transition-all duration-300 hover:bg-red-600/40"
-                >
-                  <svg
-                    className="h-5 w-5 text-red-400 group-hover:text-red-300"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-                  </svg>
-                </Link>
-                <Link
-                  href="#"
+                  href="https://www.instagram.com/aj.fitnessgym/"
                   className="group flex h-10 w-10 items-center justify-center rounded-full bg-red-600/20 transition-all duration-300 hover:bg-red-600/40"
                 >
                   <svg
@@ -613,13 +694,19 @@ export default function Home() {
               <h4 className="text-lg font-semibold text-white">Modalidades</h4>
               <nav>
                 <ul className="space-y-2">
-                  {['Musculação', 'Jiu-Jistu Brasileiro', 'CrossFit', 'Kick Boxing', 'Judo'].map((modality) => (
-                    <li key={modality}>
+                  {[
+                    { name: 'Musculação', slug: 'musculacao' },
+                    { name: 'Jiu-Jitsu Brasileiro', slug: 'jiu-jitsu-brasileiro' },
+                    { name: 'CrossFit', slug: 'cross-fit' },
+                    { name: 'Kick Boxing', slug: 'kick-boxing' },
+                    { name: 'Judo', slug: 'judo' }
+                  ].map((modalityItem) => (
+                    <li key={modalityItem.slug}>
                       <Link
-                        href="#"
+                        href={`/modalities/${modalityItem.slug}`}
                         className="text-sm text-gray-400 transition-colors duration-200 hover:text-red-400 sm:text-base"
                       >
-                        {modality}
+                        {modalityItem.name}
                       </Link>
                     </li>
                   ))}
@@ -653,7 +740,7 @@ export default function Home() {
                   </svg>
                   <div>
                     <p className="text-gray-400">
-                      Rua da Independência, 123
+                      Condominio Girassol, casa n 483
                       <br />
                       Luanda, Angola
                     </p>
@@ -675,11 +762,11 @@ export default function Home() {
                     />
                   </svg>
                   <Link
-                    href="tel:+244923456789"
+                    href="tel:+244924010504"
                     className="text-gray-400 transition-colors duration-200 hover:text-red-400"
                   >
-                    9449395940
-                  </Link>
+                    924010504
+                    </Link>
                 </div>
 
                 <div className="flex items-start space-x-3">
