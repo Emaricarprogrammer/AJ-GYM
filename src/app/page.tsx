@@ -224,139 +224,152 @@ export default function Home() {
       </section>
 
       {/* Gallery Section */}
-    <section className="relative bg-black py-20">
-        <div className="absolute inset-0 bg-gradient-to-l from-red-900/10 to-transparent"></div>
+    <section id="modalities" className="relative bg-black py-20">
+  <div className="absolute inset-0 bg-gradient-to-br from-red-900/5 via-black to-red-900/5"></div>
+  
+  <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="mb-16 text-center">
+      <h2 className="mb-4 text-4xl font-bold text-white sm:text-5xl md:text-6xl">
+        Nossas <span>Modalidades</span>
+      </h2>
+      <div className="mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-red-500 to-red-600"></div>
+      <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400 sm:text-xl">
+        Descubra as modalidades mais procuradas e transforme o seu treino numa experiência única
+      </p>
+    </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12">
-          <div className="mb-16 text-center">
-            <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">
-              Nossas Modalidades
-            </h2>
-            <div className="mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-red-500 to-red-600"></div>
-            <p className="mt-6 text-lg text-gray-400">
-                Descubra as nossas modalidades mais procuradas pelos membros.
-            </p>
+    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {[
+        {
+          image: "/gallery-2.jpg",
+          title: "Musculação",
+          description: "Treino de força com equipamentos de última geração e acompanhamento profissional",
+          features: ["Equipamentos premium", "Planos personalizados", "Acompanhamento técnico"],
+          schedule: "Seg-Sex: 05:00-22:00 | Sáb: 07:00-21:00"
+        },
+        {
+          image: "/gallery-3.jpg",
+          title: "Jiu-Jitsu Brasileiro",
+          description: "Arte marcial brasileira que desenvolve técnica, disciplina e condicionamento físico",
+          features: ["Aulas para todos os níveis", "Professores certificados", "Competições"],
+          schedule: "Seg/Qua/Sex: 18:00-20:00"
+        },
+        {
+          image: "/gallery-3.jpg",
+          title: "Kick Boxing",
+          description: "Combina técnicas de boxe e artes marciais para um treino completo e dinâmico",
+          features: ["Condicionamento físico", "Técnica de defesa", "Aulas em grupo"],
+          schedule: "Seg/Qua: 18:00-20:00"
+        },
+        {
+          image: "/gallery-3.jpg",
+          title: "CrossTraining",
+          description: "Treino funcional de alta intensidade para melhorar todas as capacidades físicas",
+          features: ["Treinos variados", "Alta intensidade", "Resultados rápidos"],
+          schedule: "Seg-Sex: 06:00-22:00"
+        },
+        {
+          image: "/logo.jpg",
+          title: "Judo",
+          description: "Arte marcial tradicional que desenvolve força, equilíbrio e autodisciplina",
+          features: ["Técnicas de projeção", "Trabalho de solo", "Valores marciais"],
+          schedule: "Seg/Qua: 20:00-22:00"
+        },
+        {
+          image: "/gallery-4.jpg",
+          title: "Zona Cardio",
+          description: "Área completa com equipamentos modernos para melhorar a sua resistência cardiovascular",
+          features: ["Esteiras profissionais", "Bicicletas elípticas", "Escadas climáticas"],
+          schedule: "Seg-Dom: 05:00-23:00"
+        }
+      ].map((modality, index) => (
+        <div
+          key={index}
+          className="group relative overflow-hidden rounded-2xl border border-red-500/20 bg-gradient-to-br from-black/80 to-red-900/10 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-red-500/40 hover:shadow-2xl"
+        >
+          {/* Image Container */}
+          <div className="relative h-64 overflow-hidden">
+            <img
+              src={modality.image}
+              alt={modality.title}
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80"></div>
+            <div className="absolute inset-0 bg-red-600/0 transition-all duration-500 group-hover:bg-red-600/10"></div>
+            
+            {/* Badge */}
+            <div className="absolute left-4 top-4">
+              <span className="rounded-full bg-red-600/90 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
+                {modality.schedule.split('|')[0].trim()}
+              </span>
+            </div>
           </div>
-          <div className="grid gap-8 md:grid-cols-3">
-            <div className="group relative overflow-hidden rounded-xl border border-red-500/20 bg-black/50 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-red-500/40">
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src="/gallery-2.jpg"
-                  alt="Musculação"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-              </div>
 
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="mb-2 text-2xl font-bold text-white">
-                  Musculação
-                </h3>
-                <p className="text-gray-300">
-                  {/* Esteiras, bicicletas e elípticas para melhorar a resistência */}
+          {/* Content */}
+          <div className="relative p-6">
+            <h3 className="mb-3 text-2xl font-bold text-white group-hover:text-red-400 transition-colors duration-300">
+              {modality.title}
+            </h3>
+            
+            <p className="mb-4 text-gray-300 leading-relaxed">
+              {modality.description}
+            </p>
 
-                </p>
+            {/* Features */}
+            <ul className="mb-4 space-y-2">
+              {modality.features.map((feature, featureIndex) => (
+                <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                  <svg
+                    className="mr-2 h-4 w-4 flex-shrink-0 text-red-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            {/* Schedule */}
+            <div className="mt-4 flex items-center justify-between border-t border-red-500/20 pt-4">
+              <div className="flex items-center text-xs text-gray-400">
+                <svg
+                  className="mr-1 h-4 w-4 text-red-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>{modality.schedule}</span>
               </div>
               
-
-              <div className="absolute inset-0 bg-red-600/0 transition-all duration-300 group-hover:bg-red-600/10"></div>
-            </div>
-
-            <div className="group relative overflow-hidden rounded-xl border border-red-500/20 bg-black/50 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-red-500/40">
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src="/gallery-3.jpg"
-                  alt="Zona Cardio"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-              </div>
-
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="mb-2 text-2xl font-bold text-white">
-                  Jiu-Jistu Brasileiro
-                </h3>
-                <p className="text-gray-300">
-                  {/* Esteiras, bicicletas e elípticas para melhorar a resistência */}
-                </p>
-              </div>
-
-              <div className="absolute inset-0 bg-red-600/0 transition-all duration-300 group-hover:bg-red-600/10"></div>
-            </div>
-
-              <div className="group relative overflow-hidden rounded-xl border border-red-500/20 bg-black/50 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-red-500/40">
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src="/gallery-3.jpg"
-                  alt="Zona Cardio"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-              </div>
-
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="mb-2 text-2xl font-bold text-white">
-                  Kick Boxing
-                </h3>
-                <p className="text-gray-300">
-                  {/* Esteiras, bicicletas e elípticas para melhorar a resistência */}
-                </p>
-              </div>
-
-              <div className="absolute inset-0 bg-red-600/0 transition-all duration-300 group-hover:bg-red-600/10"></div>
-            </div>
-            <div className="group relative overflow-hidden rounded-xl border border-red-500/20 bg-black/50 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-red-500/40">
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src="/gallery-3.jpg"
-                  alt="Zona Cardio"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-              </div>
-
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="mb-2 text-2xl font-bold text-white">
-                  CrossTraining
-                  </h3>
-                <p className="text-gray-300">
-                  {/* Esteiras, bicicletas e elípticas para melhorar a resistência */}
-                </p>
-              </div>
-
-              <div className="absolute inset-0 bg-red-600/0 transition-all duration-300 group-hover:bg-red-600/10"></div>
-            </div>
-                <div className="group relative overflow-hidden rounded-xl border border-red-500/20 bg-black/50 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-red-500/40">
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src="/logo.jpg"
-                  alt="Zona Cardio"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-              </div>
-
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="mb-2 text-2xl font-bold text-white">
-                  Judo
-                  </h3>
-                <p className="text-gray-300">
-                  {/* Esteiras, bicicletas e elípticas para melhorar a resistência */}
-                </p>
-              </div>
-
-              <div className="absolute inset-0 bg-red-600/0 transition-all duration-300 group-hover:bg-red-600/10"></div>
+              <button className="transform rounded-full bg-red-600/20 px-4 py-2 text-xs font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-red-600/40 hover:scale-105">
+                Saber Mais
+              </button>
             </div>
           </div>
-          {/*
-          <div className="mt-12 text-center">
-            <button className="transform rounded-full border border-red-500/30 bg-red-600/20 px-8 py-3 font-medium text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-red-500/60 hover:bg-red-600/40">
-              Ver Mais Fotos
-            </button>
-          </div>
-          /* End Ver Mais Fotos */}
+
+          {/* Hover Effect */}
+          <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-red-600/0 via-red-600/0 to-red-600/0 transition-all duration-500 group-hover:from-red-600/10 group-hover:via-red-600/5 group-hover:to-red-600/10"></div>
         </div>
-      </section>
+      ))}
+    </div>
+
+  </div>
+</section>
 
       {/* Pricing Section */}
       <section id="pricing" className="relative bg-black py-20">
