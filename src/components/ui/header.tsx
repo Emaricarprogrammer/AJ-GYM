@@ -84,7 +84,7 @@ export function Header() {
             <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
           </Link>
           <Link
-            href={getLinkHref('contact')}
+            href={getLinkHref('footer')}
             className="group relative font-medium text-white transition-colors duration-200 hover:text-red-400"
           >
             Contacto

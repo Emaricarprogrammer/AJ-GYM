@@ -39,7 +39,13 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
               <button className="transform rounded-full bg-red-600 px-8 py-4 text-base font-semibold text-white shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-red-700 hover:shadow-3xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-black sm:text-lg">
-                Começar Treino
+            <Link
+            href="#about"
+              rel="noopener noreferrer"
+              className="transform rounded-full bg-red-600 px-8 py-3 text-lg font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-red-700 hover:shadow-lg"
+            >
+              Ver mais
+            </Link>
               </button>
             </div>
           </div>
@@ -542,7 +548,7 @@ export default function Home() {
 </section>
 
       {/* Footer */}
-      <footer className="relative border-t border-red-500/20 bg-black">
+      <footer className="relative border-t border-red-500/20 bg-black" id="footer">
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/5 to-transparent" />
         
         <div className="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
