@@ -14,14 +14,14 @@ export default function Home() {
           loop
           playsInline
           className="absolute inset-0 h-full w-full object-cover"
-          poster="/gallery-4.jpg" // Imagem de fallback
+          poster="/gym1.jpg" // Imagem de fallback
         >
-          <source src="/vid.mp4" type="video/mp4" />
+          <source src="/vid4.mp4" type="video/mp4" />
           <source src="/hero-video.webm" type="video/webm" />
           {/* Fallback para browsers que não suportam vídeo */}
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/gallery-4.jpg')" }}
+            style={{ backgroundImage: "url('/gym1.jpg')" }}
           />
         </video>
         <div className="absolute inset-0 bg-black/70" />
@@ -160,74 +160,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-
-          {/* Popular Classes 
-          <div className="mt-16 sm:mt-20">
-            <div className="mb-8 text-center sm:mb-12">
-              <h3 className="mb-4 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-                Modalidades <span>Populares</span>
-              </h3>
-              <p className="mx-auto max-w-2xl text-gray-400">
-                Descobre as nossas modalidades mais procuradas pelos membros
-              </p>
-            </div>
-
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {[
-                {
-                  icon: (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  ),
-                  title: "Musculação",
-                  description: "Treino de força com equipamentos profissionais e orientação especializada."
-                },
-                {
-                  icon: (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  ),
-                  title: "Cardio",
-                  description: "Melhora a tua resistência cardiovascular com as nossas máquinas de cardio."
-                },
-                {
-                  icon: (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                  ),
-                  title: "Aulas de Grupo",
-                  description: "Zumba, Yoga, CrossFit e muito mais em aulas dinâmicas e motivadoras."
-                }
-              ].map((modality, index) => (
-                <div
-                  key={index}
-                  className="group rounded-lg border border-red-500/20 bg-gradient-to-br from-red-600/20 to-red-800/20 p-6 backdrop-blur-sm transition-all duration-300 hover:from-red-600/30 hover:to-red-800/30"
-                >
-                  <div className="mb-4">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-red-600/20 transition-colors duration-300 group-hover:bg-red-600/30 sm:h-16 sm:w-16">
-                      <svg className="h-6 w-6 text-red-400 sm:h-8 sm:w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        {modality.icon}
-                      </svg>
-                    </div>
-                  </div>
-                  <h4 className="mb-3 text-xl font-semibold text-white">{modality.title}</h4>
-                  <p className="text-gray-400">{modality.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>*/}
         </div>
       </section>
 
@@ -640,23 +572,11 @@ export default function Home() {
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
+                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 4a4.75 4.75 0 1 1 0 9.5a4.75 4.75 0 0 1 0-9.5zm0 1.5a3.25 3.25 0 1 0 0 6.5a3.25 3.25 0 0 0 0-6.5zm5-1.25a1 1 0 1 1 0 2a1 1 0 0 1 0-2z" />
                   </svg>
                 </Link>
                 <Link
-                  href="#"
-                  className="group flex h-10 w-10 items-center justify-center rounded-full bg-red-600/20 transition-all duration-300 hover:bg-red-600/40"
-                >
-                  <svg
-                    className="h-5 w-5 text-red-400 group-hover:text-red-300"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.120.112.225.085.347-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.146-1.378l.451-1.711c.165-.631.667-2.538.667-2.538s.17.331.17.82c0 .781-.496 1.607-1.116 1.607-.835 0-1.447-.87-1.447-2.027 0-1.35.967-2.294 2.133-2.294.781 0 1.18.45 1.18 1.08 0 .788-.504 1.418-1.184 1.418-.304 0-.596-.155-.693-.416 0 0-.151.594-.188.74-.09.35-.335 1.31-.457 1.688-.182.56-.272 1.01-.332 1.314C10.11 21.815 5.013 18.262 5.013 11.987 5.013 8.27 8.27 5.013 12.017 5.013s7.005 3.256 7.005 6.974c0 6.624-5.259 11.987-11.005 11.987z" />
-                  </svg>
-                </Link>
-                <Link
-                  href="#"
+                  href="malito:ajfitness@gmail.com"
                   className="group flex h-10 w-10 items-center justify-center rounded-full bg-red-600/20 transition-all duration-300 hover:bg-red-600/40"
                 >
                   <svg
@@ -667,6 +587,31 @@ export default function Home() {
                     <path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z" />
                   </svg>
                 </Link>
+                <Link
+                  href="https://web.facebook.com/AjFitnessGym"
+                  className="group flex h-10 w-10 items-center justify-center rounded-full bg-red-600/20 transition-all duration-300 hover:bg-red-600/40"
+                >
+                  <svg
+                    className="h-5 w-5 text-red-400 group-hover:text-red-300"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 2 .1v2.3h-1.1c-1 0-1.3.6-1.3 1.2v1.7h2.6l-.4 2.9h-2.2v7A10 10 0 0 0 22 12z" />
+                  </svg>
+                </Link>
+                <Link
+                    href="https://wa.me/244924010504?text=Olá! Gostaria de marcar uma aula experimental."
+                  className="group flex h-10 w-10 items-center justify-center rounded-full bg-red-600/20 transition-all duration-300 hover:bg-red-600/40"
+                >
+                  <svg
+                    className="h-5 w-5 text-red-400 group-hover:text-red-300"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20.52 3.48A11.78 11.78 0 0 0 12 0a11.77 11.77 0 0 0-10 18.2L0 24l5.94-1.56A11.76 11.76 0 1 0 20.52 3.48zM12 21.46a9.43 9.43 0 0 1-4.8-1.31l-.34-.2-3.52.93.94-3.43l-.22-.35A9.46 9.46 0 1 1 12 21.46zm5.32-7.17c-.29-.15-1.72-.85-1.98-.95s-.46-.15-.65.15s-.75.95-.92 1.15s-.34.22-.63.07a7.68 7.68 0 0 1-2.26-1.39a8.37 8.37 0 0 1-1.55-1.93c-.16-.27 0-.42.12-.57s.27-.34.41-.51a1.91 1.91 0 0 0 .27-.46a.49.49 0 0 0-.02-.46c-.07-.15-.65-1.57-.9-2.16s-.47-.5-.65-.51h-.56a1.09 1.09 0 0 0-.79.37a3.29 3.29 0 0 0-1.03 2.43a5.73 5.73 0 0 0 1.2 3.02a13.15 13.15 0 0 0 5 4.57a16.58 16.58 0 0 0 1.6.59a3.86 3.86 0 0 0 1.78.11a2.93 2.93 0 0 0 2-1.42a2.46 2.46 0 0 0 .17-1.42c-.07-.13-.26-.21-.55-.36z" />
+                  </svg>
+                </Link>
+
               </div>
             </div>
 
@@ -696,10 +641,11 @@ export default function Home() {
                 <ul className="space-y-2">
                   {[
                     { name: 'Musculação', slug: 'musculacao' },
-                    { name: 'Jiu-Jitsu Brasileiro', slug: 'jiu-jitsu-brasileiro' },
+                    { name: 'Zona-cardio', slug: 'zona-cardio' },
                     { name: 'CrossFit', slug: 'cross-fit' },
+                    { name: 'Judo', slug: 'judo' },
                     { name: 'Kick Boxing', slug: 'kick-boxing' },
-                    { name: 'Judo', slug: 'judo' }
+                    { name: 'Jiu-Jitsu Brasileiro', slug: 'jiu-jitsu-brasileiro' },
                   ].map((modalityItem) => (
                     <li key={modalityItem.slug}>
                       <Link

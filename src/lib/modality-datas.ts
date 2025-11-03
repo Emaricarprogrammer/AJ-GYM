@@ -32,7 +32,7 @@ export const modalitiesData: Record<string, Modality> = {
   'musculacao': {
     id: 'musculacao',
     title: "Musculação",
-    heroImage: "/mus.jpg",
+    heroImage: "/vid4.mp4",
     description: "Treino de força com equipamentos de última geração e acompanhamento profissional",
     longDescription: "A musculação é uma modalidade de treino de força que visa o desenvolvimento muscular através de exercícios com pesos livres, máquinas e equipamentos especializados. No nosso ginásio, oferecemos equipamentos de última geração e acompanhamento profissional personalizado para garantir os melhores resultados.",
     whatIs: "A musculação é uma atividade física que consiste no treino de força utilizando pesos, máquinas e equipamentos específicos para desenvolver a massa muscular, aumentar a força e melhorar a condição física geral.",
@@ -98,7 +98,7 @@ export const modalitiesData: Record<string, Modality> = {
   'cross-fit': {
     id: 'cross-fit',
     title: "Cross Fit",
-    heroImage: "/gallery-4.jpg",
+    heroImage: "/vid4.mp4",
     description: "Treino funcional de alta intensidade para melhorar todas as capacidades físicas",
     longDescription: "O CrossFit é um programa de treino de força e condicionamento físico que combina movimentos funcionais executados em alta intensidade. Desenvolve todas as capacidades físicas: resistência cardiovascular, resistência muscular, força, flexibilidade, potência, velocidade, coordenação, agilidade, equilíbrio e precisão.",
     whatIs: "O CrossFit é uma metodologia de treino que incorpora movimentos funcionais constantemente variados, executados em alta intensidade. É um programa completo que prepara o corpo para qualquer desafio físico.",
@@ -164,7 +164,7 @@ export const modalitiesData: Record<string, Modality> = {
   'jiu-jitsu-brasileiro': {
     id: 'jiu-jitsu-brasileiro',
     title: "Jiu-Jitsu Brasileiro",
-    heroImage: "/bjj.jpg",
+    heroImage: "/vid6.mp4",
     description: "Arte marcial brasileira que desenvolve técnica, disciplina e condicionamento físico",
     longDescription: "O Jiu-Jitsu Brasileiro é uma arte marcial que se concentra no combate de agarramento e no chão. Utiliza alavancas e técnicas de submissão para permitir que um praticante menor e mais fraco possa se defender com sucesso de um oponente maior e mais forte através da técnica adequada.",
     whatIs: "O Jiu-Jitsu Brasileiro (BJJ) é uma arte marcial, desporto de combate e sistema de autodefesa focado no grappling e especialmente na luta de chão. Desenvolvido no Brasil, é conhecido como 'a arte suave'.",
@@ -229,7 +229,7 @@ export const modalitiesData: Record<string, Modality> = {
   'kick-boxing': {
     id: 'kick-boxing',
     title: "Kick Boxing",
-    heroImage: "/kickboxing.jpg",
+    heroImage: "/vid3.mp4",
     description: "Combina técnicas de boxe e artes marciais para um treino completo e dinâmico",
     longDescription: "O Kickboxing é um desporto de combate que combina técnicas de boxe com chutes das artes marciais. Oferece um treino cardiovascular intenso enquanto ensina técnicas de autodefesa eficazes.",
     whatIs: "O Kickboxing é uma arte marcial e desporto de combate que combina os socos do boxe com os chutes das artes marciais como o Karaté e Muay Thai. É excelente para condicionamento físico e autodefesa.",
@@ -289,7 +289,7 @@ export const modalitiesData: Record<string, Modality> = {
   'judo': {
     id: 'judo',
     title: "Judo",
-    heroImage: "/judo.jpg",
+    heroImage: "/vid6.mp4",
     description: "Arte marcial tradicional que desenvolve força, equilíbrio e autodisciplina",
     longDescription: "O Judo é uma arte marcial japonesa que se concentra em projeções, imobilizações e técnicas de controlo no solo. Desenvolvido a partir do Jiu-Jitsu, o Judo enfatiza o uso eficiente da energia e o desenvolvimento pessoal.",
     whatIs: "O Judo, que significa 'caminho suave', é uma arte marcial japonesa criada por Jigoro Kano em 1882. É um desporto olímpico que foca no uso da força do oponente contra ele mesmo.",
@@ -349,7 +349,7 @@ export const modalitiesData: Record<string, Modality> = {
   'zona-cardio': {
     id: 'zona-cardio',
     title: "Zona Cardio",
-    heroImage: "/cardio.jpg",
+    heroImage: "/vid.mp4",
     description: "Área completa com equipamentos modernos para melhorar a sua resistência cardiovascular",
     longDescription: "A nossa zona cardio está equipada com os mais modernos equipamentos para treino cardiovascular. Ideal para melhorar a resistência, queimar calorias e fortalecer o sistema cardiovascular.",
     whatIs: "A Zona Cardio é uma área especializada do ginásio dedicada ao treino cardiovascular, com equipamentos que visam melhorar a saúde do coração, pulmões e sistema circulatório.",
